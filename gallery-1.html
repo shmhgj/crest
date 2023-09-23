@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Gallery</title>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 20px;
+    }
+    .gallery-item {
+      margin: 10px;
+      cursor: pointer;
+    }
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .lightbox.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Crest Hospital Gallery</h1>
+  <div class="banner-bottom">
+    <div class="container">
+        <ul class="banner-list">
+            <li> <i class="las la-home"></i> <a href="/"> HOME </a> </li>
+            <li> <i class="las la-angle-double-right"></i> Gallery </li>
+        </ul>
+    </div>
+</div>
+   <div>
+    <h1 align="center">Doctor Chamber</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/fe24ac40-6322-4dc7-bc1f-defe023598dd_WhatsApp%20Image%202023-08-05%20at%2014.24.14%20(1).jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/4fd3bb0d-2870-4bfc-b9c9-0fafae0ae48f_WhatsApp%20Image%202023-08-05%20at%2014.24.14.jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/a4c24f1a-86e0-4621-8be1-3661745ce27e_WhatsApp%20Image%202023-08-05%20at%2014.24.13%20(2).jpeg" alt="Image 3" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/b933f5c3-86ce-422c-be32-d3fb8a5d4665_WhatsApp%20Image%202023-08-05%20at%2014.24.13%20(1).jpeg" alt="Image 4" onclick="openLightbox(this)" >
+    <img src="https://gangahospital.org/UserImages/18ba973a-cbb0-4312-a8d5-1afa948d1204_WhatsApp%20Image%202023-08-05%20at%2014.24.13.jpeg" alt="Image 5" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/a4c24f1a-86e0-4621-8be1-3661745ce27e_WhatsApp%20Image%202023-08-05%20at%2014.24.13%20(2).jpeg" alt="Image 6" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/0212ae04-62ae-458c-9916-9d5b440aa71f_WhatsApp%20Image%202023-08-05%20at%2014.24.12%20(1).jpeg" alt="Image 7" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/3c35fa81-14e5-46f7-b6ed-c255759a9077_WhatsApp%20Image%202023-08-05%20at%2014.24.12.jpeg" alt="Image 8" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/c294614c-5344-41c1-9795-59bed26432d6_WhatsApp%20Image%202023-08-05%20at%2014.21.09.jpeg" alt="Image 9" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">ICU</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/2e97bc4d-6546-4dc1-a136-de3b5dbe0f56_WhatsApp%20Image%202023-08-05%20at%2014.25.07%20(2).jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/d583f90b-e512-4114-9586-60c32a5be8a6_WhatsApp%20Image%202023-08-05%20at%2014.25.07%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/c6593be5-4b8f-469c-9a9c-d945e9b90f19_WhatsApp%20Image%202023-08-05%20at%2014.25.07.jpeg" alt="Image 3" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/1e07853c-0e2a-4bc9-a4cc-9ad8efcc9a3b_WhatsApp%20Image%202023-08-05%20at%2014.25.06%20(1).jpeg" alt="Image 4" onclick="openLightbox(this)" >
+    <img src="https://gangahospital.org/UserImages/d561ccba-6369-4235-a805-75afde3dd378_WhatsApp%20Image%202023-08-05%20at%2014.25.05.jpeg" alt="Image 5" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/6306b166-3256-49ee-9228-aa8703b5f304_WhatsApp%20Image%202023-08-05%20at%2014.25.06.jpeg" alt="Image 6" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">OT</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/5710522b-29e9-41d0-8177-19227fc7b5e9_WhatsApp%20Image%202023-08-05%20at%2014.25.52%20(1).jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/0ab92376-0915-4674-bca1-a96c8bb5af17_WhatsApp%20Image%202023-08-05%20at%2014.25.52.jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/e3fd13bd-60bd-4e44-9df0-03b37c71186c_WhatsApp%20Image%202023-08-05%20at%2014.25.51.jpeg" alt="Image 3" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">General Ward</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/11bbfe2f-cde6-49f8-9fba-30ce374bce62_WhatsApp%20Image%202023-08-05%20at%2014.26.51.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/518b3f96-ece1-4508-85ad-bb88a1bdf2d2_WhatsApp%20Image%202023-08-05%20at%2014.26.50.jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">HDU</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/1e3223d5-3b86-47b2-b191-238dc71a3a1f_WhatsApp%20Image%202023-08-05%20at%2014.27.39.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">X-Ray</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/84ab8df4-9ee5-48e4-ae45-a910d93d0d36_WhatsApp%20Image%202023-08-05%20at%2014.28.37.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/d295dae0-a20c-47cf-844c-c0abbf437d8e_WhatsApp%20Image%202023-08-05%20at%2014.28.37%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/84ab8df4-9ee5-48e4-ae45-a910d93d0d36_WhatsApp%20Image%202023-08-05%20at%2014.28.37.jpeg" alt="Image 3" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+  
+  <div>
+    <h1 align="center">Private Room</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/06205df2-a044-4934-8b4c-41ca15b09121_WhatsApp%20Image%202023-08-05%20at%2014.29.10.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/e0ae6413-6dd0-4747-b20d-0b927064aea8_WhatsApp%20Image%202023-08-05%20at%2014.29.11.jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+
+  <div>
+    <h1 align="center">icu wating area</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/6460a74b-7096-41bf-8f03-9d72b09313f3_WhatsApp%20Image%202023-08-05%20at%2014.29.52.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">Pathology</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/f1d59a40-3a53-4ae6-b600-0d248c19dcb4_WhatsApp%20Image%202023-08-05%20at%2014.30.35.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/c2c5e618-b26d-428f-a327-e7c24b69e182_WhatsApp%20Image%202023-08-05%20at%2014.30.35%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/7c30daef-a5df-41b5-9249-42fa7014a60a_WhatsApp%20Image%202023-08-05%20at%2014.30.35%20(2).jpeg" alt="Image 3" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">Physiotherapy</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/5cb1131b-e7eb-449d-83bb-5ecd77208765_WhatsApp%20Image%202023-08-05%20at%2014.31.14.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/502b7d27-f598-4943-b753-9560053b48d9_WhatsApp%20Image%202023-08-05%20at%2014.31.14%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div>
+    <h1 align="center">Ct machine room</h1>
+   </div>
+  <div class="gallery">
+    <img src="https://gangahospital.org/UserImages/370215dd-0dc9-4dee-922f-cac6f9efcd5e_WhatsApp%20Image%202023-08-05%20at%2014.32.49.jpeg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="https://gangahospital.org/UserImages/a0d55112-1de8-4b66-83ae-a8703dd33426_WhatsApp%20Image%202023-08-05%20at%2014.32.49%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+    <!-- Add more images as needed -->
+  </div>
+
+
+  <div class="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Lightbox Image" id="lightbox-image">
+  </div>
+
+  <script>
+    function openLightbox(imageElement) {
+      const lightbox = document.querySelector('.lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      lightboxImage.src = imageElement.src;
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+      const lightbox = document.querySelector('.lightbox');
+      lightbox.classList.remove('active');
+    }
+  </script>
+</body>
+</html>

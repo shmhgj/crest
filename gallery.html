@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/fev-icon.png"/>
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Hospital</title>
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Jquery Ui -->
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Flaticon -->
+        <link href="css/flaticon.css" rel="stylesheet" type="text/css"/>
+        <!-- Owl Carousel -->
+        <link href="owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css"/>
+        <link href="owl-carousel/owl.theme.css" rel="stylesheet" type="text/css"/>
+        <link href="owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css"/>
+        <!-- Revolution Style Sheet -->
+        <link href="revolution/css/settings.css" rel="stylesheet" type="text/css"/>
+        <!-- Revolution Layers Styles -->
+        <link href="revolution/css/layers.css" rel="stylesheet" type="text/css"/>
+        <!-- Revolution Navigation Styles -->
+        <link href="revolution/css/navigation.css" rel="stylesheet" type="text/css"/>
+        <!-- Custom Style Sheet -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body id="page-top">
+        <!-- Loader icon -->
+        <div class="se-pre-con"></div>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="info-outer hidden-xs">
+                            <div class="info-box">
+                                <div class="icon"><span class="flaticon-mail"></span></div>
+                                <a href="mailt:companyname@mail.com">hospitalcrest240@gmail.com</a>
+                            </div>
+                            <div class="info-box">
+                                <div class="icon"><span class="flaticon-customer-service"></span></div>
+                                <a class="phone" href="#">+91 9631552533</a>
+                            </div>
+                        </div>
+                        <!--Header Social Icon -->
+                        <div class="social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-lg fa-vimeo-square"></i></a></li>
+                                <li><a href="#"><i class="fa fa-lg fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-lg fa-skype"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav id="mainNav" class="navbar navbar-default  navbar-fixed">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display --> 
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="index.html#page-top"><img src="https://gangahospital.org/UserImages/bfaf5f5d-27ea-476a-bdcf-1a12fa178488_CREST__1_-removebg-preview.png" alt=""></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling --> 
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href="index.html#about" class="page-scroll">About</a></li>
+                        <li><a href="index.html#service" class="page-scroll">Service</a></li>
+                        <li><a href="index.html#appointment" class="page-scroll">Appointment</a></li>
+                        <li><a href="index.html#doctor" class="page-scroll">Doctors</a></li>
+                        <li><a href="index.html#department" class="page-scroll">Department</a></li>
+                        <li><a href="gallery.html" class="page-scroll">Gallery</a></li>
+                        <li><a href="index.html#contact" class="page-scroll">Contact</a></li>
+                    </ul>
+                </div> <!-- /.navbar-collapse --> 
+            </div> <!--/.container --> 
+        </nav>
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Hospital Gallery</title>
+          <style>
+      .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  body {
+      font-family: Arial, sans-serif;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 20px;
+    }
+    .gallery-item {
+      margin: 10px;
+      cursor: pointer;
+    }
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .lightbox.active {
+      visibility: visible;
+      opacity: 1;
+    }
+          </style>
+        </head>
+        <body>
+
+          <h1 align="center">Crest Hospital Gallery</h1>
+
+           <div>
+            <h1 align="center">Doctor </h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/24adad30-4f50-41a6-9847-cfafabf6b6c1_WhatsApp%20Image%202023-08-03%20at%2015.09.04%20(1).jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+        
+          <div>
+            <h1 align="center">ICU</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/1e07853c-0e2a-4bc9-a4cc-9ad8efcc9a3b_WhatsApp%20Image%202023-08-05%20at%2014.25.06%20(1).jpeg" alt="Image 4" onclick="openLightbox(this)" >
+            <img src="https://gangahospital.org/UserImages/d561ccba-6369-4235-a805-75afde3dd378_WhatsApp%20Image%202023-08-05%20at%2014.25.05.jpeg" alt="Image 5" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+        
+          <div>
+            <h1 align="center">OT</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/5710522b-29e9-41d0-8177-19227fc7b5e9_WhatsApp%20Image%202023-08-05%20at%2014.25.52%20(1).jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <img src="https://gangahospital.org/UserImages/e3fd13bd-60bd-4e44-9df0-03b37c71186c_WhatsApp%20Image%202023-08-05%20at%2014.25.51.jpeg" alt="Image 3" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+        
+          <div>
+            <h1 align="center">General Ward</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/11bbfe2f-cde6-49f8-9fba-30ce374bce62_WhatsApp%20Image%202023-08-05%20at%2014.26.51.jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <img src="https://gangahospital.org/UserImages/518b3f96-ece1-4508-85ad-bb88a1bdf2d2_WhatsApp%20Image%202023-08-05%20at%2014.26.50.jpeg" alt="Image 2" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+        
+          <div>
+            <h1 align="center">HDU</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/1e3223d5-3b86-47b2-b191-238dc71a3a1f_WhatsApp%20Image%202023-08-05%20at%2014.27.39.jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+        
+          <div>
+            <h1 align="center">X-Ray</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/d295dae0-a20c-47cf-844c-c0abbf437d8e_WhatsApp%20Image%202023-08-05%20at%2014.28.37%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+            <img src="https://gangahospital.org/UserImages/84ab8df4-9ee5-48e4-ae45-a910d93d0d36_WhatsApp%20Image%202023-08-05%20at%2014.28.37.jpeg" alt="Image 3" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+          
+          <div>
+            <h1 align="center">Private Room</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/06205df2-a044-4934-8b4c-41ca15b09121_WhatsApp%20Image%202023-08-05%20at%2014.29.10.jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <img src="https://gangahospital.org/UserImages/e0ae6413-6dd0-4747-b20d-0b927064aea8_WhatsApp%20Image%202023-08-05%20at%2014.29.11.jpeg" alt="Image 2" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+
+                  <div>
+            <h1 align="center">icu wating area</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/6460a74b-7096-41bf-8f03-9d72b09313f3_WhatsApp%20Image%202023-08-05%20at%2014.29.52.jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+
+          <div>
+            <h1 align="center">Pathology</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/f1d59a40-3a53-4ae6-b600-0d248c19dcb4_WhatsApp%20Image%202023-08-05%20at%2014.30.35.jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <img src="https://gangahospital.org/UserImages/7c30daef-a5df-41b5-9249-42fa7014a60a_WhatsApp%20Image%202023-08-05%20at%2014.30.35%20(2).jpeg" alt="Image 3" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+        
+          <div>
+            <h1 align="center">Physiotherapy</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/5cb1131b-e7eb-449d-83bb-5ecd77208765_WhatsApp%20Image%202023-08-05%20at%2014.31.14.jpeg" alt="Image 1" onclick="openLightbox(this)">
+            <img src="https://gangahospital.org/UserImages/502b7d27-f598-4943-b753-9560053b48d9_WhatsApp%20Image%202023-08-05%20at%2014.31.14%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+
+          <div>
+            <h1 align="center">CT Scan Room</h1>
+           </div>
+          <div class="gallery">
+            <img src="https://gangahospital.org/UserImages/a0d55112-1de8-4b66-83ae-a8703dd33426_WhatsApp%20Image%202023-08-05%20at%2014.32.49%20(1).jpeg" alt="Image 2" onclick="openLightbox(this)">
+            <!-- Add more images as needed -->
+          </div>
+
+          <div class="lightbox" onclick="closeLightbox()">
+            <img src="" alt="Lightbox Image" id="lightbox-image">
+          </div>
+        
+          <script>
+            function openLightbox(imageElement) {
+              const lightbox = document.querySelector('.lightbox');
+              const lightboxImage = document.getElementById('lightbox-image');
+              lightboxImage.src = imageElement.src;
+              lightbox.classList.add('active');
+            }
+        
+            function closeLightbox() {
+              const lightbox = document.querySelector('.lightbox');
+              lightbox.classList.remove('active');
+            }
+          </script>
+        </body>
+        </html>
+        
+
+       <!-- Footer Section -->
+       <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="appointment-link">
+                        <div class="ap-inner">
+                            <div class="ap-icon">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="ap-text">
+                                <h3>Need a Doctor for Check-up?</h3>
+                                <h2>JUST MAKE AN APPOINTMENT & YOU'RE DONE ! </h2>
+                            </div>
+                        </div>
+                        <div class="ap-btn">
+                            <a href="index.html#form" class="thm-btn page-scroll">get an appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Address -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-box address-inner">
+                        <img src="https://gangahospital.org/UserImages/bfaf5f5d-27ea-476a-bdcf-1a12fa178488_CREST__1_-removebg-preview.png" class="img-responsive" alt="">
+                </div>
+              </div>
+                <!-- Latest News -->
+                <div b-phid5zgumd="" class="col-md-3 col-sm-6">
+                  <div b-phid5zgumd="" class="footer-box">
+                      <h4 b-phid5zgumd="" class="footer-title">ABOUT US</h4>
+                      <div b-phid5zgumd="" class="post-widget">
+                        We are a leading hospital committed to exceptional healthcare services. Our dedicated team of skilled professionals utilizes advanced medical technology to provide compassionate care and effective treatments. With a focus on patient well-being and medical excellence, we strive to be your trusted partner on your journey to health and recovery.
+                      </div>
+                  </div>
+              </div>
+                <!-- Latest Tweet -->
+                <div b-phid5zgumd="" class="col-md-3 col-sm-6">
+                  <div b-phid5zgumd="" class="footer-box">
+                      <h4 b-phid5zgumd="" class="footer-title">Useful Links</h4>
+                      <div b-phid5zgumd="" class="">
+                          <ul b-phid5zgumd="">
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="gallery.html" style="color:#fff;">-Gallery</a></li>
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="index.html#contact" style="color:#fff;">-Contact</a></li>
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="index.html#department" style="color:#fff;">-Department</a></li>
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="index.html#doctor" style="color:#fff;">-Doctor</a></li>
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="index.html#appointment" style="color:#fff;">-Appointment</a></li>
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="index.html#service" style="color:#fff;">-Service</a></li>
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="index.html#about" style="color:#fff;">- About</a></li>
+                                      <li b-phid5zgumd=""><a b-phid5zgumd="" href="index.html" style="color:#fff;">- Home</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+                <!-- Map --> 
+                <div b-phid5zgumd="" class="col-md-3 col-sm-6">
+                  <div b-phid5zgumd="" class="">
+                      <h4 b-phid5zgumd="" class="footer-title">Contact us</h4>
+                      <div b-phid5zgumd="" class="footer-box address-inner">
+                          <div b-phid5zgumd="" class="address">
+                              <i b-phid5zgumd="" class="flaticon-placeholder"></i>
+                              <p b-phid5zgumd="">
+                                <a style="color:#fff;">Sai Mandir, Lakho, near Pink City, Bihar 851129</a>
+                              </p>
+                          </div>
+                          <div b-phid5zgumd="" class="address">
+                              <i b-phid5zgumd="" class="flaticon-customer-service"></i>
+                              <p b-phid5zgumd=""><a style="color:#fff;">+91- 96315 52533</a></p>
+                          </div>
+                          <div b-phid5zgumd="" class="address">
+                              <i b-phid5zgumd="" class="flaticon-mail"></i>
+                              <p b-phid5zgumd=""><a b-phid5zgumd="" href="mailto:crest.cashless@gmail.com"><crest class="cashless"></crest>@gmail.com</a> </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    </footer>
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <p>Copyright Madhav kumar 2023. All rights reserved</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="<iframe src="https:!0hospital!5e0!3m2!1sen!2sin!4v1678010348212!5m2!1sen!2sin width="100" height="233" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="revolution/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+    <script src="revolution/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+            (Load Extensions only on Local File Systems ! 
+             The following part can be removed on Server for On Demand Loading) -->	
+    <script src="revolution/js/extensions/revolution.extension.actions.min.js" type="text/javascript"></script>
+    <script src="revolution/js/extensions/revolution.extension.carousel.min.js" type="text/javascript"></script>
+    <script src="revolution/js/extensions/revolution.extension.kenburn.min.js" type="text/javascript"></script>
+    <script src="revolution/js/extensions/revolution.extension.layeranimation.min.js" type="text/javascript"></script>
+    <script src="revolution/js/extensions/revolution.extension.migration.min.js" type="text/javascript"></script>
+    <script src="revolution/js/extensions/revolution.extension.navigation.min.js" type="text/javascript"></script>
+    <script src="revolution/js/extensions/revolution.extension.parallax.min.js" type="text/javascript"></script>
+    <script src="revolution/js/extensions/revolution.extension.slideanims.min.js" type="text/javascript"></script>
+    <!-- owl carousel js -->
+    <script src="owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js" type="text/javascript"></script>
+    <!-- Jquery Ui -->
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Custom Js -->
+    <script src="js/custom.js" type="text/javascript"></script>
+    <style>
+        .whatsapp-main
+        {
+            position: fixed;
+            bottom: 20px;
+            left: 7px;
+        }
+    </style>
+</body>
+
+<div class="whatsapp-main">
+    <a href="https://api.whatsapp.com/send?phone=+91 90051 78416&amp;text=Hello from Team Crest Hospital">
+        <img src="https://gangahospital.org/UserImages/2cbd6d0e-34d2-4257-acc5-a17d44abf780_whatsapp-icon-concept_23-2147897.png" alt="WhatsApp">
+    </a>
+              </div>
+
+</html>

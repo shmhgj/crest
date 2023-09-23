@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Success</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    p {
+      font-size: 18px;
+    }
+    .success-icon {
+      display: block;
+      text-align: center;
+      font-size: 60px;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+    .success-message {
+      text-align: center;
+      font-size: 24px;
+      color: #4CAF50;
+    }
+    .redirect-message {
+      text-align: center;
+      font-size: 18px;
+    }
+    .redirect-link {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      color: #007BFF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-icon">&#10004;</div>
+    <h1 class="success-message">Payment Successful!</h1>
+    <p class="redirect-message">Thank you for your purchase. Your payment was successful.</p>
+    <p class="redirect-message">Your order will be processed and shipped soon.</p>
+    <a class="redirect-link" href="/">Return to Homepage</a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Razorpay_logo.webp/620px-Razorpay_logo.webp.png" alt="">
+  </div>
+</body>
+</html>
